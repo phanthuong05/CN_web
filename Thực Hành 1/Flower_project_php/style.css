@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background-color: #f4f4f9;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Định dạng lưới (grid) cho index.php (dạng card) */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 180px; /* Cung cấp chiều cao cố định để ảnh hiển thị */
+    object-fit: cover; 
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    color: #4CAF50;
+    margin: 5px 0;
+}
+
+.card p {
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* --- Định dạng cho admin.php (dạng bảng) --- */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Gộp các đường viền lại */
+    border: 1px solid #ccc;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-top: 20px;
+}
+
+thead th {
+    background-color: #333; /* Nền tối cho header */
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Phân biệt màu hàng chẵn */
+}
+
+tbody tr:hover {
+    background-color: #f0f0f0;
+}
+
+td {
+    padding: 10px;
+    vertical-align: middle;
+    border: 1px solid #eee;
+}
+
+/* Căn chỉnh nội dung của ô ảnh (trong admin.php) */
+tbody img {
+    display: block;
+    margin: 0 auto;
+}

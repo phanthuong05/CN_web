@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.quiz-container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px;
+}
+
+h1 {
+    color: #007bff;
+    text-align: center;
+}
+
+.question-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.options label {
+    display: block;
+    margin: 10px 0;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+#submit-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    display: block;
+    width: 100%;
+}
+
+.results {
+    margin-top: 25px;
+    padding: 15px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    background-color: #e9f5ff;
+    font-weight: bold;
+}
+
+/* Các lớp đánh dấu kết quả */
+.correct {
+    background-color: #d4edda; /* Xanh lá nhạt */
+}
+
+.incorrect {
+    background-color: #f8d7da; /* Đỏ nhạt */
+}
+.correct-answer {
+    font-weight: bold;
+    color: green;
+}
+.user-incorrect {
+    font-weight: bold;
+    color: red;
+    text-decoration: line-through;
+}
