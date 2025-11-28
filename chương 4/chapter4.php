@@ -1,5 +1,4 @@
 <?php
-// === CÀI ĐẶT HIỂN THỊ LỖI (Nên để khi dev) ===
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
@@ -18,8 +17,6 @@ try {
     // Hiển thị lỗi chi tiết nếu kết nối thất bại
     die("Kết nối thất bại: " . $e->getMessage()); 
 }
-
-// === LOGIC THÊM SINH VIÊN (XỬ LÝ FORM POST) ===
 // TODO 2: Kiểm tra xem form đã được gửi đi (method POST) và có 'ten_sinh_vien' không
 if (isset($_POST['ten_sinh_vien']) && $_SERVER['REQUEST_METHOD'] === 'POST') {
     
@@ -38,8 +35,6 @@ if (isset($_POST['ten_sinh_vien']) && $_SERVER['REQUEST_METHOD'] === 'POST') {
     header('Location: chapter4.php'); 
     exit; 
 }
-
-// === LOGIC LẤY DANH SÁCH SINH VIÊN (SELECT) ===
 // TODO 7: Viết câu lệnh SQL SELECT *
 $sql_select = "SELECT * FROM sinhvien ORDER BY ngay_tao DESC"; 
 
@@ -84,8 +79,8 @@ while ($row = $stmt_select->fetch(PDO::FETCH_ASSOC)) {
     echo "<td>" . htmlspecialchars($row['ngay_tao']) . "</td>";
     echo "</tr>";
 }
-// Đóng vòng lặp
 ?>
 </table>
 </body>
+
 </html>
